@@ -11,7 +11,7 @@
   
 <header>
   <div class = "logo">
-    <a href="berandaadmin.php"><img src="1.png" width="20%"></a>
+    <a href="berandaadmin.php"><img src="../img/1.png" width="20%"></a>
   </div>
 </header>
 
@@ -20,7 +20,7 @@
         <a href="reservasi.php">Reservasi</a>
         <a href="cekmember.php">Member</a>
         <a href="cekstaff.php">Staff</a>
-        <a href="logout.php">Logout</a>
+        <a href="../portal/logout.php">Logout</a>
 </nav>
 <main>
 <div class="container">

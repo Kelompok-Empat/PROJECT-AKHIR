@@ -36,7 +36,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Member</h5>
 						<p class="card-text">Login untuk Member</p>
-						<a href="loginmember.php" class="btn btn-primary">Lihat Selengkapnya</a>
+						<a href="portal/loginmember.php" class="btn btn-primary">Lihat Selengkapnya</a>
 					</div>
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Admin</h5>
 						<p class="card-text">Login untuk Admin</p>
-						<a href="loginadmin.php" class="btn btn-primary">Lihat Selengkapnya</a>
+						<a href="portal/loginadmin.php" class="btn btn-primary">Lihat Selengkapnya</a>
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Staff</h5>
 						<p class="card-text">Login untuk Staff</p>
-						<a href="loginstaff.php" class="btn btn-primary">Lihat Selengkapnya</a>
+						<a href="portal/loginstaff.php" class="btn btn-primary">Lihat Selengkapnya</a>
 					</div>
 				</div>
 			</div>
