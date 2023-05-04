@@ -22,6 +22,7 @@
         <a href="cekstaff.php">Staff</a>
         <a href="logout.php">Logout</a>
 </nav>
+
 <main>
     <div class="table-container">
         <table>
@@ -39,9 +40,11 @@
                 <td>tes</td>
                 <th>tes</th>
             </tr>
+</table>
         </div>
       
 </main>
+
 <footer>
         <p>
            2023 Copyright ANCF
