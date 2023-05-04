@@ -5,29 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>beranda</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   
 <header>
   <div class = "logo">
-    <a href="berandaadmin.php"><img src="1.png" width="20%"></a>
+    <a href="berandastaff.php"><img src="../img/1.png" width="20%"></a>
   </div>
 </header>
 
 <nav style="text-align: right;">
         
-        <a href="reservasi.php">Reservasi</a>
-        <a href="cekmember.php">Member</a>
-        <a href="cekstaff.php">Staff</a>
-        <a href="logout.php">Logout</a>
+        <a href="produk.php">Cek Produk</a>
+        <a href="../portal/logout.php">Logout</a>
 </nav>
 <main>
   <div  class="greeting">
-      <h2>Hi! Selamat Datang Admin!</h2>
+      <h2>Hi! Selamat Datang Staff!</h2>
       <P>Have a good day!</P>
       </div>  
-      
 </main>
 <footer>
         <p>

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>beranda</title>
+    <title>struk</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
 <header>
   <div class = "logo">
-    <a href="berandamember.php"><img src="1.png" width="20%"></a>
+    <a href="berandamember.php"><img src="../img/1.png" width="20%"></a>
   </div>
 </header>
 
@@ -20,13 +20,19 @@
         <a href="tentangkami.php">Tentang Kami</a>
         <a href="ruangan.php">Ruangan</a>
         <a href="reservasimember.php">Reservasi</a>
-        <a href="logout.php">Logout</a>
+        <a href="../portal/logout.php">Logout</a>
 </nav>
 <main>
-  <div  class="greeting">
-      <h2>Hi! Selamat Datang Member!</h2>
-      <P>Have a good day!</P>
-      </div>  
+<div class="container">
+      <div class="containers">
+        <h1>Struk Reservasi</h1>
+            Name            : <br><br>
+            Tgl. Check In   : <br><br>
+            Tgl. Check Out  : <br><br>
+            Ruangan         : <br><br>
+            Total           : 
+          </div>
+      </div>
 </main>
 <footer>
         <p>

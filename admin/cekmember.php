@@ -13,13 +13,13 @@ $result = mysqli_query($conn, $query);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cek Member</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   
 <header>
   <div class = "logo">
-    <a href="berandaadmin.php"><img src="1.png" width="20%"></a>
+    <a href="berandaadmin.php"><img src="../img/1.png" width="20%"></a>
   </div>
 </header>
 
@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $query);
         <a href="reservasi.php">Reservasi</a>
         <a href="cekmember.php">Member</a>
         <a href="cekstaff.php">Staff</a>
-        <a href="logout.php">Logout</a>
+        <a href="../portal/logout.php">Logout</a>
 </nav>
 <main>
 <div class="search-container">
