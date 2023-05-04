@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>beranda</title>
+    <title>Reservasi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,10 +23,23 @@
         <a href="logout.php">Logout</a>
 </nav>
 <main>
-  <div  class="greeting">
-      <h2>Hi! Selamat Datang Admin!</h2>
-      <P>Have a good day!</P>
-      </div>  
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Tgl Checkin</th>
+                <th>Tgl Checkout</th>
+                <th>Ruangan</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>tes</td>
+                <td>tes</td>
+                <td>tes</td>
+                <th>tes</th>
+            </tr>
+        </div>
       
 </main>
 <footer>
@@ -39,4 +52,4 @@
 </footer>
 
 </body>
-</html>
+</html> 

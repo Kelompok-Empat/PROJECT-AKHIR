@@ -20,9 +20,20 @@
         <a href="tentangkami.php">Tentang Kami</a>
         <a href="ruangan.php">Ruangan</a>
         <a href="reservasimember.php">Reservasi</a>
+        <a href="logout.php">Logout</a>
 </nav>
 <main>
-  <h1>TEST TENTANG KAMI</h1>
+  <div class="slider">
+    <div class="slides">
+      <img src="hotel1.png" alt="Slide 1">
+      <img src="hotel2.png" alt="Slide 2">
+      <img src="hotel3.png" alt="Slide 3">
+      <img src="hotel4.png" alt="Slide 4">
+    </div>
+</div>
+
+      <h2>About Us</h2>
+      <P>TES TES</P>
 </main>
 <footer>
         <p>
