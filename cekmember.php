@@ -40,7 +40,6 @@ $result = mysqli_query($conn, $query);
                 <th>No</th>
                 <th>Nama</th>
                 <th>Email</th>
-                <th>Setting</th>
             </tr>
             <?php
             $i = 1;
@@ -50,7 +49,6 @@ $result = mysqli_query($conn, $query);
                 <td><?php echo $i ?></td>
                 <td><?php echo $row["nama"] ?></td>
                 <td><?php echo $row["email"] ?></td>
-                <td>ini buat edit</td>
             </tr>
             <?php $i++; ?>
             <?php } ?>
