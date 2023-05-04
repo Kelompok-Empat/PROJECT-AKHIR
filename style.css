@@ -57,3 +57,158 @@ footer {
 footer p {
   padding-left: 5px;
 }
+
+main {
+  align-items: center;
+}
+
+.greeting {
+  color: #55725C;
+  padding: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.table-container {
+  margin: 0 auto;
+  width: 75%; 
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  color: #55725c;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+
+}
+
+th, td {
+  padding: 10px; 
+  border: 2px solid #55725C;
+}
+
+.tambah {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.tambah a{
+  text-decoration: none;
+  color: #55725C;
+  font-size: 20px;
+}
+
+.container{
+  padding: 50px 100px 100px 250px;
+  align-items: center;
+}
+
+.containers{
+  font-family: 'Poppins', sans-serif;
+  width: 800px;
+  min-height: 300px;
+  background: #EAE7EE;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  padding: 40px 30px 40px 30px;
+}
+
+.containers h1{
+  text-align: center;
+  font-size: 30px;
+  color: #55725C;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"], 
+select {
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+
+input[type="submit"] {
+    background-color: #55725C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #2E5F7D;
+  font-size: 16px;
+  width: 100%;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: slide 10s infinite;
+}
+
+.slides img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  45% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  95% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

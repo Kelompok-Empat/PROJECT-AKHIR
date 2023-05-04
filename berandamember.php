@@ -20,9 +20,13 @@
         <a href="tentangkami.php">Tentang Kami</a>
         <a href="ruangan.php">Ruangan</a>
         <a href="reservasimember.php">Reservasi</a>
+        <a href="logout.php">Logout</a>
 </nav>
 <main>
-  <h1>TEST MEMBER</h1>
+  <div  class="greeting">
+      <h2>Hi! Selamat Datang Member!</h2>
+      <P>Have a good day!</P>
+      </div>  
 </main>
 <footer>
         <p>

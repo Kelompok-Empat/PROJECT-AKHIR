@@ -23,10 +23,17 @@
         <a href="logout.php">Logout</a>
 </nav>
 <main>
-  <div  class="greeting">
-      <h2>Hi! Selamat Datang Admin!</h2>
-      <P>Have a good day!</P>
-      </div>  
+<div class="container">
+      <div class="containers">
+        <h1>Form Staff</h1><br>
+          <form method="post" action="pesan.php" action="staff.php">
+              <input type="text" for="nama" id="nama" placeholder="Name" name="nama" required><br><br>
+              <input type="text" for="email" id="email" placeholder="Email" name="email" required><br><br>
+              <input type="password" for="pass" id="pass" placeholder="Password" name="password" required><br><br>
+              <input type="submit" value="Tambah" id="tambah">
+          </form>
+          </div>
+      </div>
       
 </main>
 <footer>

@@ -20,9 +20,30 @@
         <a href="tentangkami.php">Tentang Kami</a>
         <a href="ruangan.php">Ruangan</a>
         <a href="reservasimember.php">Reservasi</a>
+        <a href="logout.php">Logout</a>
 </nav>
 <main>
-  <h1>TEST Reservasi</h1>
+<div class="container">
+      <div class="containers">
+        <h1>Reservasi</h1><br>
+          <form method="post" action="struk.php">
+              <label for="name">Nama</label>
+              <input type="text"><br><br>
+              <label for="checkin">Tanggal Check In</label><br>
+              <input type="date"><br><br>
+              <label for="checkout">Tanggal Check Out</label><br>
+              <input type="date"><br><br>
+              <label for="roomtype">Tipe Kamar</label><br>
+              <select id="roomtype" name="roomtype">
+                <option value="standard">Standard</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="suite">Suite</option>
+              </select>
+              <br><br>
+              <input type="submit" value="Submit">
+          </form>
+          </div>
+      </div>
 </main>
 <footer>
         <p>
