@@ -1,3 +1,14 @@
+<?php 
+
+session_start();
+
+// Cek apakah user sudah login atau belum
+if($_SESSION['status']!="loginuser" && !isset($_SESSION["id"])){
+  header("location:../index.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

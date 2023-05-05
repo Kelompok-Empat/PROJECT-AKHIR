@@ -1,3 +1,27 @@
+<?php 
+
+require '../koneksi.php';
+
+if (isset($_POST['email']) && isset($_POST['password'])) {
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  
+  $sql = "SELECT * FROM member WHERE email='$email' AND password='$password'";
+  $query = mysqli_query($conn, $sql);
+  $cek = mysqli_num_rows($query);
+  
+  if($cek > 0){
+    session_start();
+    $_SESSION['email'] = $email;
+	$_SESSION["status"] = 'loginuser';
+    $_SESSION['id'] = mysqli_query($conn, "SELECT id_member FROM member WHERE email='$email' AND password='$password'");
+    header("location:../member/berandamember.php");
+  } else {
+    echo "<script>alert('Gagal Login');</script>";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +62,7 @@
 					</div>
 
 					<div class="card-body">
-						<form method="post" action="proses_login.php">
+						<form method="post" action="">
 
 
 <!-- ini letak buat masukkin formnya -->
@@ -50,10 +74,6 @@
 								<label for="password">Password</label>
 								<input type="password" name="password" class="form-control" required>
 							</div>
-
-
-
-
 
 							<button type="submit" class="btn btn-primary btn-block">Login</button>
 
