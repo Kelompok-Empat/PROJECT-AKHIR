@@ -1,3 +1,20 @@
+<?php 
+
+require '../koneksi.php';
+
+session_start();
+
+// Cek apakah user sudah login atau belum
+if($_SESSION['status']!="loginuser" && !isset($_SESSION["id"])){
+  header("location:../index.php");
+  exit;
+}
+
+$sql = "SELECT * FROM room";
+$query = mysqli_query($conn, $sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +22,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruangan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ruangan.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ruangan.css">
 </head>
 <body>
 
@@ -27,27 +44,31 @@
 
   <h1>Hotel Room Options</h1>
 
+
   <div id = "ruangan">
+    <?php while($data = mysqli_fetch_assoc($query)):?>
     <div class="room">
-      <img src="hotel1.png" alt="Room 1">
-      <h2>Deluxe Room</h2>
-      <p class="price">$200 per night</p>
+      <img src="../img/hotel<?= $data['id_tipe'] ?>.png" alt="Room 1">
+      <h2><?= $data['no_room'] ?> | Nama Ruangan</h2>
+      <p class="price">Kapasitas : <?= $data['kapasitas'] ?></p>
+      <p class="price">Rp <?= $data['harga'] ?> per malam</p>
       <p><a href="reservasimember.php">Book Now</a></p>
     </div>
+    <?php endwhile?>
 
-    <div class="room">
-      <img src="hotel2.png" alt="Room 2">
+    <!-- <div class="room">
+      <img src="../img/hotel2.png" alt="Room 2">
       <h2>Standard Room</h2>
       <p class="price">$100 per night</p>
       <p><a href="reservasimember.php">Book Now</a></p>
     </div>
 
     <div class="room">
-      <img src="hotel4.png" alt="Room 3">
+      <img src="../img/hotel4.png" alt="Room 3">
       <h2>Suite Room</h2>
       <p class="price">$500 per night</p>
       <p><a href="reservasimember.php">Book Now</a></p>
-    </div>
+    </div> -->
   </div>
 
 </main>
