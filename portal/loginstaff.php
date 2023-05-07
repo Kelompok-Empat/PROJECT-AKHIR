@@ -13,8 +13,12 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
   if($cek > 0){
     session_start();
     $_SESSION['email'] = $email;
-	$_SESSION["status"] = 'loginuser';
-    $_SESSION['id'] = mysqli_query($conn, "SELECT id_staff FROM staff WHERE email='$email' AND password='$password'");
+	$_SESSION["status"] = 'loginstaff';
+	$result = mysqli_query($conn, "SELECT id_staff FROM staff WHERE email='$email' AND password='$password'");
+	if ($result && mysqli_num_rows($result) > 0) {
+		$row = mysqli_fetch_assoc($result);
+		$_SESSION['id'] = $row['id_staff'];
+	}
     header("location:../staff/berandastaff.php");
   } else {
     echo "<script>alert('Gagal Login');</script>";

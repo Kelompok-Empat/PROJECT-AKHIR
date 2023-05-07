@@ -1,3 +1,18 @@
+<?php 
+require '../koneksi.php';
+
+session_start();
+
+// Cek apakah user sudah login atau belum
+if($_SESSION['status']!="loginadmin" && !isset($_SESSION["id"])){
+  header("location:../index.php");
+}
+
+$id = $_SESSION["id"];
+$sql = "SELECT * FROM reservasi";
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,13 +48,17 @@
                 <th>Tgl Checkout</th>
                 <th>Ruangan</th>
             </tr>
+            <?php $nomor = 1?>
+            <?php while ($row = mysqli_fetch_assoc($result)):?>
             <tr>
-                <td>1</td>
-                <td>tes</td>
-                <td>tes</td>
-                <td>tes</td>
-                <th>tes</th>
+                <td><?= $nomor ?></td>
+                <td><?= $row['nama'] ?></td>
+                <td><?= $row['tgl_checkin'] ?></td>
+                <td><?= $row['tgl_checkout'] ?></td>
+                <th><?= $row['id_room'] ?></th>
             </tr>
+            <?php $nomor++?>
+            <?php endwhile?>
 </table>
         </div>
       

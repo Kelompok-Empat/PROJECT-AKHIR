@@ -7,6 +7,11 @@ if($_SESSION['status']!="loginuser" && !isset($_SESSION["id"])){
   header("location:../index.php");
 }
 
+$id = $_SESSION["id"];
+$sql = "SELECT * FROM member WHERE id_member = $id";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +40,7 @@ if($_SESSION['status']!="loginuser" && !isset($_SESSION["id"])){
 </nav>
 <main>
   <div  class="greeting">
-      <h2>Hi! Selamat Datang Member!</h2>
+      <h2>Hi! Selamat Datang <?= $row['nama'] ?>!</h2>
       <P>Have a good day!</P>
       </div>  
 </main>
