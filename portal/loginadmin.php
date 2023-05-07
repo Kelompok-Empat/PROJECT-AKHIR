@@ -14,7 +14,11 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     session_start();
     $_SESSION['email'] = $email;
 	$_SESSION["status"] = 'loginadmin';
-    $_SESSION['id'] = mysqli_query($conn, "SELECT id_admin FROM admin WHERE email='$email' AND password='$password'");
+    $result = mysqli_query($conn, "SELECT id_admin FROM admin WHERE email='$email' AND password='$password'");
+		if ($result && mysqli_num_rows($result) > 0) {
+			$row = mysqli_fetch_assoc($result);
+			$_SESSION['id'] = $row['id_admin'];
+		}
     header("location:../admin/berandaadmin.php");
   } else {
     echo "<script>alert('Gagal Login');</script>";

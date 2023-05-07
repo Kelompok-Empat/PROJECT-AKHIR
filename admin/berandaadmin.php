@@ -1,4 +1,5 @@
 <?php 
+require '../koneksi.php';
 
 session_start();
 
@@ -7,7 +8,12 @@ if($_SESSION['status']!="loginadmin" && !isset($_SESSION["id"])){
   header("location:../index.php");
 }
 
+$id = $_SESSION["id"];
+$sql = "SELECT * FROM admin WHERE id_admin = $id";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +40,7 @@ if($_SESSION['status']!="loginadmin" && !isset($_SESSION["id"])){
 </nav>
 <main>
   <div  class="greeting">
-      <h2>Hi! Selamat Datang Admin!</h2>
+      <h2>Hi! Selamat Datang <?= $row['nama_admin'] ?>!</h2>
       <P>Have a good day!</P>
       </div>  
       
