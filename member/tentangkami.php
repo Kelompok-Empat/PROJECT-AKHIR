@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tentangkami.css">
 </head>
 <body>
 
@@ -23,17 +24,17 @@
         <a href="../portal/logout.php">Logout</a>
 </nav>
 <main>
-  <div class="slider">
-    <div class="slides">
-      <img src="../img/hotel1.png" alt="Slide 1">
-      <img src="../img/hotel2.png" alt="Slide 2">
-      <img src="../img/hotel3.png" alt="Slide 3">
-      <img src="../img/hotel4.png" alt="Slide 4">
-    </div>
-</div>
-
-      <h2>About Us</h2>
-      <P>TES TES</P>
+  <div class="content">
+    <img src="../img/hotel1.png" alt="Slide 1">
+    <img src="../img/hotel2.png" alt="Slide 2">
+    <img src="../img/hotel3.png" alt="Slide 3">
+    <img src="../img/hotel4.png" alt="Slide 4">
+  </div>
+ 
+  <div class="about">
+      <p><b>About Us</b></p>
+      <h1>Mountain Lodge adalah bla bla bla</h1>
+  </div>
 </main>
 <footer>
         <p>

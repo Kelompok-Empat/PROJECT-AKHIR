@@ -5,71 +5,60 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portal | Mountain Lodge</title>
-
-	<!-- Load Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-	<link rel="stylesheet" href="css/portal.css">
-
-	<style>
-		.card:nth-child(1) {
-			background-color: #2E5F7D;
-			color: #fff;
-		}
-
-		.card:nth-child(2) {
-			background-color: #8CB27F;
-			color: #fff;
-		}
-
-		.card:nth-child(3) {
-			background-color: #EAE7EE;
-			color: #000;
-		}
-	</style>
-
+	<title>Mountain Lodge</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="index.css">
 </head>
 
+
 <body>
-	<div class="container mt-5">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Member</h5>
-						<p class="card-text">Login untuk Member</p>
-						<a href="portal/loginmember.php" class="btn btn-primary">Masuk Sekarang!</a>
-					</div>
-				</div>
-			</div>
+	
+	
+  
+	<header>
+		<div class = "logo">
+		<img src="img/1.png" width="20%">
+		</div>
+	</header>
 
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Admin</h5>
-						<p class="card-text">Login untuk Admin</p>
-						<a href="portal/loginadmin.php" class="btn btn-primary">Masuk Sekarang!</a>
-					</div>
-				</div>
-			</div>
+	<nav style="text-align: right;">
+			
+		<a href="loginlanjutan.php">Login Untuk Reservasi</a>
 
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Staff</h5>
-						<p class="card-text">Login untuk Staff</p>
-						<a href="portal/loginstaff.php" class="btn btn-primary">Masuk Sekarang!</a>
-					</div>
-				</div>
-			</div>
+	</nav>
+
+	<main>
+		
+	<div id="welcome">
+		<img src="hd.png" alt="rooms" width="30%">
+		<div class="tulisanwelcome">
+			<h2 style="text-align: left;">Hallo! Mountain Lodgears<span id = "nm" ></span></h2>
+			<h3 style="text-align: justify;"> Sudah siap berehat sejenak?</h3>
+			<p style="text-align: justify;">  Silahkan  login dan reservasi! Dapatkan pengalaman terbaik anda di Mountain Lodge</p>
+		</div> 
+	</div>
+
+	<!-- bestseller ganti kamar -->
+	<div id = "kamar">
+		<h2 style="text-align: center;">The rooms are ready For you!</h2>
+		<div class="imgbestseller" style="text-align: center;">
+			<img src="hotel1.png" alt="h1" width="20%">
+			<img src="hotel2.png" alt="h2" width="20%">
+			<img src="hotel3.png" alt="h3" width="20%">
+			<img src="hotel4.png" alt="h4" width="20%">
 		</div>
 	</div>
 
-	<!-- Load Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
+	<!-- waiter ganti fasilitas -->
+	<div id="fasilitas">
+			<h2 style="text-align: center;">Feel free to try this</h2>
+			<div class="img fasilitas" style="text-align: center;">
 
-</html>
+			<img src="img/spa.png" alt="spa" width="20%">
+			<img src="img/res.png" alt="res" width="20%">
+			<img src="img/pool.png" alt="pool" width="20%">
+
+	</div>
+
+	</main>
+</body>

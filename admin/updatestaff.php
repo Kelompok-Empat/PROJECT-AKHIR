@@ -1,43 +1,3 @@
-<?php
-require "../koneksi.php";
-
-session_start();
-
-// Cek apakah user sudah login atau belum
-if ($_SESSION['status'] != "loginstaff" && !isset($_SESSION["id"])) {
-  header("location:../index.php");
-  exit;
-}
-
-if (isset($_POST["submit"])) {
-  // Ambil data dari form
-  $nama = $_POST["namastaff"];
-  $email = $_POST["emailstaff"];
-  $password = $_POST["passwordstaff"];
-  $job = $_POST["job"];
-
-  // Query untuk menambahkan data ke dalam tabel staff
-  $query = "INSERT INTO staff (nama_staff, email,job, password) VALUES ('$nama', '$email','$job','$password')";
-
-  // Jalankan query
-  $result = mysqli_query($conn, $query);
-
-  // Cek apakah data berhasil disimpan
-  if ($result) {
-    // Redirect ke halaman daftar staff dengan pesan sukses
-    header("Location: cekstaff.php");
-  } else {
-    // Redirect ke halaman daftar staff dengan pesan error
-    echo "
-    <script>
-    alert('gagal menambahkan staff');
-    </script>
-    ";
-  }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +5,7 @@ if (isset($_POST["submit"])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tambah Staff</title>
+  <title>Update Staff</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -67,7 +27,7 @@ if (isset($_POST["submit"])) {
   <main>
     <div class="container">
       <div class="containers">
-        <h1>Form Staff</h1><br>
+        <h1>Update Staff</h1><br>
         <form method="post" action="">
           <input type="text" name="namastaff" placeholder="Nama" required>
           <br><br>
@@ -77,7 +37,7 @@ if (isset($_POST["submit"])) {
           <br><br>
           <input type="text" name="job" placeholder="Job Staff" required>
           <br><br>
-          <input type="submit" name="submit" value="Tambah">
+          <input type="submit" name="submit" value="update">
         </form>
       </div>
     </div>

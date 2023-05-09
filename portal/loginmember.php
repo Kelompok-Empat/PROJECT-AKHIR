@@ -85,6 +85,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 							<button type="submit" class="btn btn-primary btn-block">Login</button>
 
 						</form>
+						<div class="text-center mt-3">
+                        <div>Belum punya akun?</div>
+                        <a href="registrasi.php">Regis dulu</a>
 					</div>
 
 				</div>

@@ -71,7 +71,10 @@ $result = mysqli_query($conn, $query);
                         <td>
                             <?php echo $row["job"] ?>
                         </td>
-                        <td>ini buat edit</td>
+                        <td>
+                            <a href="updatestaff.php?id=<?php echo $row["id_staff"] ?>">Update</a><br>
+                            <a href="hapusstaff.php?id=<?php echo $row["id_staff"] ?>">Hapus</a>
+                        </td>
                     </tr>
                     <?php $i++; ?>
                 <?php } ?>
