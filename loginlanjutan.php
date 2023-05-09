@@ -11,7 +11,7 @@
 	<!-- Load Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="css/portal.css">
+	<link rel="stylesheet" href="css/portal.css">
 
 <style>
     .card:nth-child(1) {
@@ -35,34 +35,36 @@
     
 
 <body>
-	<div class="container mt-5">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Member</h5>
-						<p class="card-text">Login untuk Member</p>
-						<a href="portal/loginmember.php" class="btn btn-primary">Masuk Sekarang!</a>
+	<div class='container-main'>
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Member</h5>
+							<p class="card-text">Login untuk Member</p>
+							<a href="portal/loginmember.php" class="btn btn-primary">Masuk Sekarang!</a>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Admin</h5>
-						<p class="card-text">Login untuk Admin</p>
-						<a href="portal/loginadmin.php" class="btn btn-primary">Masuk Sekarang!</a>
+	
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Admin</h5>
+							<p class="card-text">Login untuk Admin</p>
+							<a href="portal/loginadmin.php" class="btn btn-primary">Masuk Sekarang!</a>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Staff</h5>
-						<p class="card-text">Login untuk Staff</p>
-						<a href="portal/loginstaff.php" class="btn btn-primary">Masuk Sekarang!</a>
+	
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Staff</h5>
+							<p class="card-text">Login untuk Staff</p>
+							<a href="portal/loginstaff.php" class="btn btn-primary">Masuk Sekarang!</a>
+						</div>
 					</div>
 				</div>
 			</div>

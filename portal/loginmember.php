@@ -1,6 +1,14 @@
 <?php
-
+session_start();
 require '../koneksi.php';
+
+if(isset($_SESSION["regis"])){
+	if ($_SESSION["regis"] == 'success'){
+		echo "
+			<script>alert('registrasi berhasil')</script>
+			";
+	}
+}
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
 	$email = $_POST['email'];
@@ -87,7 +95,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 						</form>
 						<div class="text-center mt-3">
                         <div>Belum punya akun?</div>
-                        <a href="registrasi.php">Regis dulu</a>
+                        <a href="../registrasi.php">Regis dulu</a>
 					</div>
 
 				</div>

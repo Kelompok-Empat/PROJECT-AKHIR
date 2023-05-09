@@ -25,22 +25,25 @@ $result = mysqli_query($conn, $sql);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>struk</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reservasi-justify.css">
+  <link rel="stylesheet" href="../css/struk.css">
 </head>
 
 <body>
 
-  <header>
+  <nav>
     <div class="logo">
-      <a href="berandamember.php"><img src="../img/1.png" width="20%"></a>
+      <a href="berandamember.php">
+        <img src="../img/1.png" width="20%">
+      </a>
     </div>
-  </header>
-
-  <nav style="text-align: right;">
-
-    <a href="tentangkami.php">Tentang Kami</a>
-    <a href="ruangan.php">Ruangan</a>
-    <a href="reservasimember.php">Reservasi</a>
-    <a href="../portal/logout.php">Logout</a>
+    <div class="right-links">
+      <a href="tentangkami.php">Tentang Kami</a>
+      <a href="ruangan.php">Ruangan</a>
+      <a href="reservasimember.php">Reservasi</a>
+      <a href="struk.php">Struk</a>
+      <a href="../portal/logout.php">Logout</a>
+    </div>
   </nav>
   <main>
     <div class="container">
@@ -48,14 +51,15 @@ $result = mysqli_query($conn, $sql);
         <h1>Struk Reservasi</h1>
         <hr>
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
-          <div>
+          <div class='struk'>
             <?php
             $idroom = $row['id_room'];
             $sqlroom = "SELECT * FROM room WHERE no_room= $idroom";
             $room = mysqli_query($conn, $sqlroom)->fetch_assoc();
             ?>
-            Name :
-            <?= $row['nama'] ?><br><br>
+            <p class='name'>
+              <?= $row['nama'] ?>
+            </p>
             Tgl. Check In :
             <?= $row['tgl_checkin'] ?><br><br>
             Tgl. Check Out :

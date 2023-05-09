@@ -51,22 +51,24 @@ if (isset($_GET['submit'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reservasi</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reservasi-justify.css">
 </head>
 
 <body>
 
-  <header>
+  <nav>
     <div class="logo">
-      <a href="berandamember.php"><img src="../img/1.png" width="20%"></a>
+      <a href="berandamember.php">
+        <img src="../img/1.png" width="20%">
+      </a>
     </div>
-  </header>
-
-  <nav style="text-align: right;">
-
-    <a href="tentangkami.php">Tentang Kami</a>
-    <a href="ruangan.php">Ruangan</a>
-    <a href="reservasimember.php">Reservasi</a>
-    <a href="../portal/logout.php">Logout</a>
+    <div class="right-links">
+      <a href="tentangkami.php">Tentang Kami</a>
+      <a href="ruangan.php">Ruangan</a>
+      <a href="reservasimember.php">Reservasi</a>
+      <a href="struk.php">Struk</a>
+      <a href="../portal/logout.php">Logout</a>
+    </div>
   </nav>
   <main>
     <div class="container">
@@ -112,12 +114,15 @@ if (isset($_GET['submit'])) {
     </div>
   </main>
   <footer>
-    <p>
-      2023 Copyright ANCF
-    </p>
-    <P>
-      Support by TUPRAK
-    </P>
+    <div class='container-footer'>
+
+      <p>
+        &copy; 2023 Mountain Lodge. All rights reserved.
+      </p>
+      <p>
+        Support by Arsel,Arind,Chris
+      </p>
+    </div>
   </footer>
 
 </body>

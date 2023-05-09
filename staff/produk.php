@@ -19,16 +19,16 @@ $result = mysqli_query($conn, $query);
 
 <body>
 
-    <header>
+    <nav>
         <div class="logo">
-            <a href="berandastaff.php"><img src="../img/1.png" width="20%"></a>
+            <a href="berandastaff.php">
+                <img src="../img/1.png" width="20%">
+            </a>
         </div>
-    </header>
-
-    <nav style="text-align: right;">
-
-        <a href="produk.php">Cek Produk</a>
-        <a href="../portal/logout.php">Logout</a>
+        <div class="right-links">
+            <a href="produk.php">Cek Produk</a>
+            <a href="../portal/logout.php">Logout</a>
+        </div>
     </nav>
     <main>
         <div class="search-container">
@@ -57,7 +57,7 @@ $result = mysqli_query($conn, $query);
                             <?php echo $row["jumlah"] ?>
                         </td>
                         <td>
-                        <a href="updateproduk.php?id=<?php echo $row["id_produk"] ?>">Update</a><br>
+                            <a href="updateproduk.php?id=<?php echo $row["id_produk"] ?>">Update</a><br>
                             <a href="hapusproduk.php?id=<?php echo $row["id_produk"] ?>">Hapus</a>
                         </td>
                     </tr>
@@ -68,13 +68,17 @@ $result = mysqli_query($conn, $query);
 
     </main>
     <footer>
-        <p>
-            2023 Copyright ANCF
-        </p>
-        <P>
-            Support by TUPRAK
-        </P>
+        <div class='container-footer'>
+
+            <p>
+                &copy; 2023 Mountain Lodge. All rights reserved.
+            </p>
+            <p>
+                Support by Arsel,Arind,Chris
+            </p>
+        </div>
     </footer>
+
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

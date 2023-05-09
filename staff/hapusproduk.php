@@ -10,5 +10,4 @@ if( $id ){
     document.location.href = 'produk.php';
     </script>";
 }
-
 ?>

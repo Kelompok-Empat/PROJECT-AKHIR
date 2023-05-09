@@ -1,10 +1,62 @@
+<?php
+
+session_start();
+require 'koneksi.php';
+
+if ($_SESSION["regis"] == 'failed'){
+	echo "<p>Email telah digunakan</p>";
+}
+
+if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirm_password'])) {
+	$username = $_POST['username'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$confirm_password = $_POST['confirm_password'];
+
+	// Validasi inputan
+	if ($password !== $confirm_password) {
+		echo "
+		<script>alert('Password tidak sesuai')</script>
+		";
+		exit();
+	}
+
+	$sqlemail = "SELECT * FROM member WHERE email = '$email'";
+	$resultemail = mysqli_query($conn, $sqlemail);
+
+	if (mysqli_num_rows($resultemail) > 0) {
+		header("Location: registrasi.php");
+		$_SESSION["regis"] = 'failed';
+		exit();
+	}
+
+	// Query untuk menambahkan data user baru ke database
+	$sql = "INSERT INTO member (nama, email, password) VALUES ('$username', '$email', '$password')";
+	$result = mysqli_query($conn, $sql);
+
+	// Cek apakah query berhasil dieksekusi
+	if ($result) {
+		$_SESSION["regis"] = 'success';
+		header("Location:portal/loginmember.php");
+	} else {
+		echo "
+		<script>alert('Registrasi Gagal!')</script>
+		";
+	}
+	
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Halaman Registrasi</title>
 	<!-- Load Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+
 <body>
 	<div class="container mt-5">
 		<div class="row justify-content-center">
@@ -14,7 +66,7 @@
 						<h4 class="text-center">Registrasi</h4>
 					</div>
 					<div class="card-body">
-						<form method="post" action="proses_registrasi.php">
+						<form method="post" action="">
 							<div class="form-group">
 								<label for="username">Username</label>
 								<input type="text" name="username" class="form-control" required>
@@ -44,4 +96,5 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
