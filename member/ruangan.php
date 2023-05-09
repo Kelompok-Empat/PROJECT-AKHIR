@@ -49,7 +49,16 @@ $query = mysqli_query($conn, $sql);
     <?php while($data = mysqli_fetch_assoc($query)):?>
     <div class="room">
       <img src="../img/hotel<?= $data['id_tipe'] ?>.png" alt="Room 1">
-      <h2><?= $data['no_room'] ?> | Nama Ruangan</h2>
+      <?php 
+      if ($data['no_room']<=199){
+        $namaRuangan = 'Standard';
+      } else if ($data['no_room']<=299){
+        $namaRuangan = 'Deluxe';
+      } else {
+        $namaRuangan = 'Suite';
+      }
+      ?>
+      <h2><?= $data['no_room'] ?> | <?= $namaRuangan ?></h2>
       <p class="price">Kapasitas : <?= $data['kapasitas'] ?></p>
       <p class="price">Rp <?= $data['harga'] ?> per malam</p>
       <p><a href="reservasimember.php">Book Now</a></p>

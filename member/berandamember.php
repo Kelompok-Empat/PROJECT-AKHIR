@@ -1,5 +1,7 @@
 <?php 
 
+require '../koneksi.php';
+
 session_start();
 
 // Cek apakah user sudah login atau belum
