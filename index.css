@@ -1,57 +1,95 @@
-main{
-    background-color: #2E5F7D;
-    background-size: cover;
-    background-attachment: scroll;
+main {
+  background-color: #2e5f7d;
+  background-size: cover;
+  background-attachment: scroll;
 }
 
+* {
+  /* border: 1px solid black; */
+}
 
-#welcome{
-    
-    font-size:xx-large;
-    display: flex;
-    padding-left: 70px;
-    color: #efe7e0;
-    font-family: 'Arial';
-    padding-top: 20px;
-    padding-bottom: 20px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin:10px; */
+}
+
+.logo {
+  float: left;
+  margin-left:20px;
+}
+
+.right-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-link {
+  padding: 10px 20px;
+  white-space: nowrap;
+  margin-right:20px;
+}
+
+#welcome {
+  font-size: xx-large;
+  display: flex;
+  padding-left: 70px;
+  color: #efe7e0;
+  font-family: "Arial";
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
 }
 
 .tulisanwelcome {
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 30px;
+}
 
-    align-items: center;
-    padding-top: 100px;
-    padding-right:50px ;
-    padding-left: 30px;
+.tulisanwelcome h4{
+    margin:10px 0;
 }
 
 #kamar {
-
-    background-color:#8CB27F ;
-    padding-top: 30px;
-    
+  background-color: #8cb27f;
+  padding: 40px;
 }
 
 #kamar h2 {
-
-    padding-top: 20px;
-    font-size: xx-large;
-    transform: translate(0%,-50%);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #efe7e0;
+  padding-top: 20px;
+  font-size: xx-large;
+  transform: translate(0%, -50%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #efe7e0;
 }
 
 .imgbestseller {
-
-    padding-top: 0;
-    padding-bottom: 10px;
-
+  padding-top: 0;
+  padding-bottom: 10px;
 }
 
 #fasilitas {
-    padding-top: 10px;
-    background-color:#2E5F7D;
-    font-size: larger;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #efe7e0 ;
+  padding: 40px;
+  background-color: #2e5f7d;
+  font-size: larger;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #efe7e0;
+}
 
+#fasilitas h2{
+    margin-bottom:20px;
+}
+
+#nm{
+    color: #8cb27f;
+}
+
+.tulisanwelcome p {
+    font-size:23px;
 }

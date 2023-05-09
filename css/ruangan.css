@@ -1,54 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
-  
-  h1 {
-    padding-top: 20px;
-    text-align: center;
-    padding-bottom: 20px;
-    padding-left: 20px;
-  }
 
-  .room {
-    display: inline-block;
-    margin: 20px;
-    align-items: center;
-    vertical-align: top;
-  }
-  
-  .room img {
-    width: 300px;
-    height: 200px;
-    padding-left: 70px;
-  }
-  
-  .room h2 {
-    margin-top: 10px;
-    padding-left: 70px;
-  }
+*{
+  /* border:1px solid black; */
+}
 
-  .room a{
-    padding: 15px;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    text-decoration: none;
-  }
+#ruangan{
+  width:100%;
+  text-align:center
+}
 
-  .room p{
-    padding-left: 50px;
-  }
-  
-  .room .price {
-    font-weight: bold;
-    color: red;
-    padding-left: 70px;
-  }
-  
-  /* .room button {
+h1 {
+  margin-top:10px;
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.room {
+  display: inline-block;
+  margin: 20px;
+  align-items: center;
+  vertical-align: top;
+  line-height:0.8cm;
+  border:1px solid black;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.room img {
+  width: 300px;
+  height: 200px;
+  text-align:center;
+}
+
+.room h2 {
+  margin-top: 10px;
+}
+
+.room a {
+  padding: 15px;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.room .kapasitas {
+  font-weight: bold;
+  color: #2e5f7d;
+}
+.room .price {
+  font-weight: bold;
+  color: red;
+}
+
+/* .room button {
     background-color: #4CAF50;
     border: none;
     color: white;

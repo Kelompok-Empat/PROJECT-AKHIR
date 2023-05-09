@@ -1,0 +1,36 @@
+*{
+    /* border:1px solid black; */
+}
+
+html {
+    overflow:hidden;
+}
+
+
+body{
+    height:100vh;
+    border:1px solid green;
+}
+
+.container-main{
+    border:1px solid red;
+    display:flex;
+    height:100%;
+}
+
+.container{
+    display:flex;
+    padding-bottom:100px;
+}
+
+.row{
+    margin:auto;
+}
+
+.card-body p{
+    white-space:nowrap;
+}
+
+.col-md-4{
+    padding: 0 50px;
+}

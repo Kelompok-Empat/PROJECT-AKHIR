@@ -7,22 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Update Staff</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/beranda-justify.css">
+  <link rel="stylesheet" href="../css/reservasi-justify.css">
 </head>
 
 <body>
 
-  <header>
+  <nav>
     <div class="logo">
-      <a href="berandaadmin.php"><img src="../img/1.png" width="20%"></a>
+      <a href="berandaadmin.php">
+        <img src="../img/1.png" width="20%">
+      </a>
     </div>
-  </header>
-
-  <nav style="text-align: right;">
-
-    <a href="reservasi.php">Reservasi</a>
-    <a href="cekmember.php">Member</a>
-    <a href="cekstaff.php">Staff</a>
-    <a href="../portal/logout.php">Logout</a>
+    <div class="right-links">
+      <a href="reservasi.php">Reservasi</a>
+      <a href="cekmember.php">Member</a>
+      <a href="cekstaff.php">Staff</a>
+      <a href="../portal/logout.php">Logout</a>
+    </div>
   </nav>
   <main>
     <div class="container">
@@ -44,12 +46,15 @@
 
   </main>
   <footer>
-    <p>
-      2023 Copyright ANCF
-    </p>
-    <P>
-      Support by TUPRAK
-    </P>
+    <div class='container-footer'>
+
+      <p>
+        &copy; 2023 Mountain Lodge. All rights reserved.
+      </p>
+      <p>
+        Support by Arsel,Arind,Chris
+      </p>
+    </div>
   </footer>
 
 </body>

@@ -1,6 +1,14 @@
 <?php
-
+session_start();
 require '../koneksi.php';
+
+if(isset($_SESSION["regis"])){
+	if ($_SESSION["regis"] == 'success'){
+		echo "
+			<script>alert('registrasi berhasil')</script>
+			";
+	}
+}
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
 	$email = $_POST['email'];
@@ -34,8 +42,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login As Member</title>
-
+	<title>Login | Mountain Lodge</title>
 
 	<!-- Load Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -88,7 +95,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 						</form>
 						<div class="text-center mt-3">
                         <div>Belum punya akun?</div>
-                        <a href="registrasi.php">Regis dulu</a>
+                        <a href="../registrasi.php">Regis dulu</a>
 					</div>
 
 				</div>
