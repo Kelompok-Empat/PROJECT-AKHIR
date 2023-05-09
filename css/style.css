@@ -10,16 +10,6 @@ header {
   padding: 10px 10px 10px 30px;
 }
 
-header p {
-  font-size: 300%;
-  font-weight: bold;
-  position: absolute;
-  top: 10%;
-  right: 1%;
-  transform: translate(-10%,-50%);
-  font-family: sans-serif;
-}
-
 nav {
   background-color: #EAE7EE;
   color: #f6f0eb;

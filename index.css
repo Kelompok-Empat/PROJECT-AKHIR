@@ -1,0 +1,57 @@
+main{
+    background-color: #2E5F7D;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
+#welcome{
+    
+    font-size:xx-large;
+    display: flex;
+    padding-left: 70px;
+    color: #efe7e0;
+    font-family: 'Arial';
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tulisanwelcome {
+
+    align-items: center;
+    padding-top: 100px;
+    padding-right:50px ;
+    padding-left: 30px;
+}
+
+#kamar {
+
+    background-color:#8CB27F ;
+    padding-top: 30px;
+    
+}
+
+#kamar h2 {
+
+    padding-top: 20px;
+    font-size: xx-large;
+    transform: translate(0%,-50%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #efe7e0;
+}
+
+.imgbestseller {
+
+    padding-top: 0;
+    padding-bottom: 10px;
+
+}
+
+#fasilitas {
+    padding-top: 10px;
+    background-color:#2E5F7D;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #efe7e0 ;
+
+}
