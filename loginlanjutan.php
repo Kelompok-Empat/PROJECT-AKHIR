@@ -14,6 +14,9 @@
 	<link rel="stylesheet" href="css/portal.css">
 
 <style>
+	body {
+		background-image: url('ab (6).png');
+	}
     .card:nth-child(1) {
         background-color: #2E5F7D;
         color: #fff;
@@ -28,11 +31,11 @@
         background-color: #EAE7EE;
         color: #000;
     }
+
+	
 </style>
 
 </head>
-<body>
-    
 
 <body>
 	<div class='container-main'>
