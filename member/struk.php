@@ -76,12 +76,15 @@ $result = mysqli_query($conn, $sql);
     </div>
   </main>
   <footer>
-    <p>
-      2023 Copyright ANCF
-    </p>
-    <P>
-      Support by TUPRAK
-    </P>
+    <div class='container-footer'>
+
+      <p>
+        &copy; 2023 Mountain Lodge. All rights reserved.
+      </p>
+      <p>
+        Support by Arsel,Arind,Chris
+      </p>
+    </div>
   </footer>
 
 </body>
