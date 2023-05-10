@@ -67,16 +67,8 @@ Alur :
     Masukkan data dirimu dan tekan tombol daftar. 
     
     
-![4](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/83e27d31-4f54-4b3b-aa4a-c719ec3cd202)
 
-
-    Setelah daftar maka diharapkan bisa melakukan login untuk lanjut ke proses berikutnya.
-    
-    
-![5](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/b5f35fb0-e46d-426c-83f5-d31d537ccfdd)
-
-
-![6](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/7362fa12-f7d4-4c31-8d56-80b701549727)
+![36](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/07596800-c17b-490f-b042-c19350639ecc)
 
 
     Silahkan login untuk melakukan reservasi.
@@ -114,7 +106,8 @@ Alur :
       
 ![13](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/58322404-f81b-42c4-91be-e6be867543cf)
 
-![14](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/8afd6ed4-b2cb-4945-b31a-6526718182b9)
+![37](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/62eb1883-ad1e-4e39-81f9-a2b6ea3fff12)
+
 
 
       Setelah itu maka silahkan logout dan reservasi telah berhasil.
@@ -148,7 +141,11 @@ Benefit :
     
 ![17](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/dd52ff61-c7c0-4a90-ac0c-a6a6294de8de)
 
-![18](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/28903175-9892-4ae8-84b0-81ca3b65c1ca)
+
+    Reservasi bisa di cek dengan menyortir sesuai dengan kebutuhan.
+    
+    
+![38](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/bfd3d166-58d9-42e1-813e-ed194a5c2a22)
 
 
      Masuk ke opsi member untuk melakukan pencarian member.
@@ -249,7 +246,8 @@ Benefit :
     Bisa juga melakukan searching.
     
     
-![35](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/111169a2-efaa-4c07-bc62-c294593db523)
+![39](https://github.com/Kelompok-Empat/PROJECT-AKHIR/assets/120113394/e82eea7a-793f-4fd0-8dda-17af4e501deb)
+
 
 
   Apabila sudah maka bisa melakukan logout yang akan mengarah ke tampilan utama.
