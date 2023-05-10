@@ -2,3 +2,32 @@ h1 {
     text-align:center;
     margin:40px auto;
 }
+
+form {
+    display:flex;
+    margin-bottom:20px;
+}
+
+form .pilih{
+    flex:1;
+    padding:10px;
+}
+
+.tombol{
+    /* border:1px solid red; */
+    display:flex;
+}
+
+form .butSorting{
+    border-radius:10px;
+    padding:10px 20px;
+    border:1px solid #55725c;
+    margin:auto;
+    background:white;
+    color:#55725c;
+}
+
+*{
+    /* border:1px solid black; */
+}
+

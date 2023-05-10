@@ -81,6 +81,17 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 		.pwd {
 			padding-bottom: 30px;
 		}
+
+		.bg-img {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-image: url("../img/window.jpg");
+			background-size: cover;
+		}
 	</style>
 
 </head>
@@ -121,6 +132,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 			</div>
 		</div>
 	</div>
+	<div class="bg-img"></div>
 
 	<!-- Load Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

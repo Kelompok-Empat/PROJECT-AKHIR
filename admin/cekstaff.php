@@ -4,7 +4,7 @@ require "../koneksi.php";
 session_start();
 
 // Cek apakah user sudah login atau belum
-if ($_SESSION['status'] != "loginstaff" && !isset($_SESSION["id"])) {
+if ($_SESSION['status'] != "loginadmin" && !isset($_SESSION["id"])) {
     header("location:../index.php");
     exit;
 }
@@ -72,9 +72,12 @@ $result = mysqli_query($conn, $query);
                         <td>
                             <?php echo $row["job"] ?>
                         </td>
-                        <td>
-                            <a href="updatestaff.php?id=<?php echo $row["id_staff"] ?>">Update</a><br>
-                            <a href="hapusstaff.php?id=<?php echo $row["id_staff"] ?>">Hapus</a>
+                        <td class="crud">
+                            
+                                <a class="update" href="updatestaff.php?id=<?php echo $row["id_staff"] ?>"><span>Update
+                                </span></a>
+                                <a class="delete" href="hapusstaff.php?id=<?php echo $row["id_staff"] ?>"><span>Hapus</span></a>
+                            </span>
                         </td>
                     </tr>
                     <?php $i++; ?>

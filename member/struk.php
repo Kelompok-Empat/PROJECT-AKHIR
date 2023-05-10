@@ -52,7 +52,9 @@ $result = mysqli_query($conn, $sql);
         <hr>
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
           <div class='struk'>
-            <img src="../img/formin (1).png" alt="">
+            <div class="box-img">
+              <img src="../img/formin (1).png" alt="">
+            </div>
             <?php
             $idroom = $row['id_room'];
             $sqlroom = "SELECT * FROM room WHERE no_room= $idroom";

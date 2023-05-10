@@ -4,9 +4,9 @@ require "../koneksi.php";
 session_start();
 
 // Cek apakah user sudah login atau belum
-if ($_SESSION['status'] != "loginstaff" && !isset($_SESSION["id"])) {
+if ($_SESSION['status'] != "loginadmin" && !isset($_SESSION["id"])) {
   header("location:../index.php");
-  exit;
+  exit();
 }
 
 if (isset($_POST["submit"])) {

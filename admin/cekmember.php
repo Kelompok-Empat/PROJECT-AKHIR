@@ -1,6 +1,14 @@
 <?php
 require "../koneksi.php";
 
+session_start();
+
+// Cek apakah user sudah login atau belum
+if ($_SESSION['status'] != "loginadmin" && !isset($_SESSION["id"])) {
+  header("location:../index.php");
+  exit();
+}
+
 $query = "SELECT * FROM member";
 $result = mysqli_query($conn, $query);
 
@@ -16,6 +24,7 @@ $result = mysqli_query($conn, $query);
     <title>Cek Member</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/beranda-justify.css">
+    <link rel="stylesheet" href="../css/struk.css">
 </head>
 
 <body>
@@ -39,11 +48,11 @@ $result = mysqli_query($conn, $query);
         </div>
         <div class="table-container">
             <table>
-                <tr>
+                <thead>
                     <th>No</th>
                     <th>Nama</th>
                     <th>Email</th>
-                </tr>
+                </thead>
                 <tr>
                     <?php
                     $i = 1;
