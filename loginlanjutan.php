@@ -16,6 +16,8 @@
 <style>
 	body {
 		background-image: url('ab (6).png');
+		background-size: cover;
+  		background-position: center;
 	}
     .card:nth-child(1) {
         background-color: #2E5F7D;

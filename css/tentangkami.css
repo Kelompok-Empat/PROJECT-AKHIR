@@ -6,9 +6,9 @@
   }
   
   .content img{
-      width: 95%;
+      width: 100%;
       height: 270px;
-      object-fit: cover;
+      /* object-fit: cover; */
       box-shadow: 1px 2px 3px #1111;
       border-radius: 10px;
       box-sizing: border-box;
@@ -26,9 +26,9 @@
   }
 
   .about {
-    padding: 100px;
+    padding: 60px;
     margin-top: 20px;
-    margin-right: 100px;
+    margin-left: 200px;
 }
 
 .about p{
@@ -36,7 +36,7 @@
     letter-spacing: 2px;
     font-size: 50px;
     text-align: left;
-    color: #2E5F7D;
+    color: #55725C;
     padding-top: 50px;
     margin-top: -150px;
     margin-bottom: 30px;
@@ -44,11 +44,11 @@
 
 .about h1{
     font-family: nav_font;
-    text-align: left;
+    text-align: justify;
     color: #55725C;
     font-size: 15px;
     letter-spacing: 1px;
     padding-top: 10px;
-    margin-right: 700px;
+    margin-right: 200px;
     margin-bottom: 30px;
 }
