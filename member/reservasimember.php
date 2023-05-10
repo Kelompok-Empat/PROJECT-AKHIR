@@ -52,6 +52,7 @@ if (isset($_GET['submit'])) {
   <title>Reservasi</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/reservasi-justify.css">
+  
 </head>
 
 <body>

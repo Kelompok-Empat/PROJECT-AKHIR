@@ -1,6 +1,14 @@
 <?php
 require "../koneksi.php";
 
+session_start();
+
+// Cek apakah user sudah login atau belum
+if ($_SESSION['status'] != "loginstaff" && !isset($_SESSION["id"])) {
+  header("location:../index.php");
+  exit();
+}
+
 $query = "SELECT * FROM produk";
 $result = mysqli_query($conn, $query);
 
@@ -15,6 +23,7 @@ $result = mysqli_query($conn, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produk</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/produk.css">
 </head>
 
 <body>
@@ -57,16 +66,20 @@ $result = mysqli_query($conn, $query);
                             <?php echo $row["jumlah"] ?>
                         </td>
                         <td class="crud">
-                            
-                                <a class="update" href="updateproduk.php?id=<?php echo $row["id_produk"] ?>"><span>Update
+
+                            <a class="update" href="updateproduk.php?id=<?php echo $row["id_produk"] ?>"><span>Update
                                 </span></a>
-                                <a class="delete" href="hapusproduk.php?id=<?php echo $row["id_produk"] ?>"><span>Hapus</span></a>
+                            <a class="delete"
+                                href="hapusproduk.php?id=<?php echo $row["id_produk"] ?>"><span>Hapus</span></a>
                             </span>
                         </td>
                     </tr>
                     <?php $i++; ?>
                 <?php } ?>
             </table>
+        </div>
+        <div class="tambah">
+            <p><a href="tambahproduk.php">Tambah</a></p>
         </div>
 
     </main>
