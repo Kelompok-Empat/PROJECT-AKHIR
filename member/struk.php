@@ -69,14 +69,25 @@ $result = mysqli_query($conn, $sql);
             <p class='name'>
               <?= $row['nama'] ?>
             </p>
-            Tgl. Check In:
-            <?= $row['tgl_checkin'] ?><br><br>
-            Tgl. Check Out:
-            <?= $row['tgl_checkout'] ?><br><br>
-            Ruangan:
-            <?= $idroom ?><br><br>
-            Harga:
-            <?= $formattedHarga ?>
+              Tgl. Check In:
+              <div class='isistruk'>
+                <?= $row['tgl_checkin'] ?><br><br>
+              </div>
+              Tgl. Check Out:
+              <div class='isistruk'>
+                <?= $row['tgl_checkout'] ?><br><br>
+              </div>
+              Ruangan:
+              <div class='isistruk'>
+                <?= $idroom ?><br><br>
+              </div>
+              Harga:
+              <div class='total'>
+                <?= $formattedHarga ?>
+              </div>
+            <div class="notes">
+              Terima kasih atas reservasi Anda!
+            </div>
           </div>
           <hr>
         <?php endwhile ?>
