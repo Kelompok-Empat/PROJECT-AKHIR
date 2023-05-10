@@ -80,34 +80,61 @@ if (isset($_GET['submit'])) {
           <input type="text" name="name"><br><br>
 
           <label for="checkin">Tanggal Check In</label><br>
-          <input type="date" name="checkin"><br><br>
+          <input type="date" name="checkin" id="checkin" min="<?= date('Y-m-d') ?>"><br><br>
 
           <label for="checkout">Tanggal Check Out</label><br>
-          <input type="date" name="checkout"><br><br>
+          <input type="date" name="checkout" id="checkout" min="<?= date('Y-m-d') ?>"><br><br>
+
+
 
           <label for="roomtype">Tipe Kamar</label><br>
-          <select id="roomtype" name="roomtype">
-            <option value="">Pilih Tipe</option>
-            <option value="standard">Standard</option>
-            <option value="deluxe">Deluxe</option>
-            <option value="suite">Suite</option>
-          </select>
-
-          <label for="noroom">Nomor Ruangan</label><br>
-          <select id="noroom" name="noroom">
-            <?php
-            $sql = "SELECT * FROM room";
-            $result = mysqli_query($conn, $sql);
-            while ($row = mysqli_fetch_assoc($result)) {
-              $no_room = $row['no_room'];
-              $kapasitas = $row['kapasitas'];
-              $tipe = $row['id_tipe'];
-              echo "<option value='$no_room' class='$tipe'>$no_room | Kapasitas: $kapasitas</option>";
+          <?php
+          if (isset($_GET["id"])) {
+            if ($_GET["id"] <= 199) {
+              $value = "standard";
+              $id_tipe = 1;
+            } else if ($_GET["id"] <= 299) {
+              $value = "deluxe";
+              $id_tipe = 2;
+            } else {
+              $value = "suite";
+              $id_tipe = 3;
             }
-            ?>
-          </select>
-          <br><br>
-          <input type="submit" name="submit" value="Submit">
+          } else {
+            $value = " - ";
+          }
+          ?>
+          <input id="roomtype" name="roomtype" type="text" style="background:#eee; text-transform: capitalize;" readonly value="<?= $value ?>">
+
+          <?php
+          if ($value == " - ") {
+            echo "<p style='font-size:12px;'>Silahkan pilih ruangan <a href='ruangan.php'>disini</a></p>";
+            $display = "none";
+          } else {
+            $display = "block";
+          }
+          ?>
+
+          <div style="display:<?= $display ?>">
+            <label for="noroom">Nomor Ruangan</label><br>
+            <select id="noroom" name="noroom">
+              <?php
+              if ($value != " - ") {
+                $sql = "SELECT * FROM room WHERE id_tipe = $id_tipe";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)) {
+                  $no_room = $row['no_room'];
+                  $kapasitas = $row['kapasitas'];
+                  $tipe = $row['id_tipe'];
+                  echo "<option value='$no_room' class='$tipe'>$no_room | Kapasitas: $kapasitas</option>";
+                }
+              }
+              ?>
+
+            </select>
+          </div>
+
+          <input type="submit" name="submit" value="Submit" class="butSubmit">
         </form>
 
       </div>
@@ -125,7 +152,8 @@ if (isset($_GET['submit'])) {
     </div>
   </footer>
 
+  <script src="../js/reservasi.js"></script>
+  <script src="../js/setdate.js"></script>
 </body>
-<script src="../js/reservasi.js"></script>
 
 </html>

@@ -10,7 +10,7 @@ header {
 }
 
 nav {
-  background-color: #F4F3F5;
+  background-color: #f4f3f5;
   color: #f6f0eb;
   font-family: sans-serif;
   display: flex;
@@ -26,7 +26,7 @@ nav a {
   font-size: larger;
   font-weight: bold;
   padding-right: 20px;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .logo img {
@@ -209,4 +209,66 @@ input[type="submit"] {
 .content img:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.crud span {
+  border: 2px solid #55725c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.crud .delete span:hover {
+  background: #ff5252;
+  color: white;
+}
+
+.crud .update span:hover {
+  background: #55725c;
+  color: white;
+}
+
+.produk-name {
+  background: #ddd;
+}
+
+.box-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-button input[type="submit"] {
+  order: 1; /* Mengatur urutan elemen input submit */
+}
+
+.box-button a.kembali {
+  order: 2; /* Mengatur urutan elemen tautan kembali */
+}
+
+.kembali {
+  background-color: #55725c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.kembali:hover {
+  background-color: #eae7ee;
+  color: #55725c;
+  border: 1px solid #55725c;
+}
+
+.box-button .update:hover {
+  background-color: #eae7ee;
+  color: #55725c;
+  border: 1px solid #55725c;
+}
+
+.butSubmit{
+  margin-top:20px;
 }

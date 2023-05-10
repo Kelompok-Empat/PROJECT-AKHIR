@@ -2,8 +2,8 @@
 session_start();
 require '../koneksi.php';
 
-if(isset($_SESSION["regis"])){
-	if ($_SESSION["regis"] == 'success'){
+if (isset($_SESSION["regis"])) {
+	if ($_SESSION["regis"] == 'success') {
 		echo "
 			<script>alert('registrasi berhasil')</script>
 			";
@@ -45,9 +45,33 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 	<title>Login | Mountain Lodge</title>
 
 	<!-- Load Bootstrap CSS -->
+	<link rel="stylesheet" href="../css/protal.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 	<style>
+		body {
+			height: 100vh;
+		}
+
+		.containers {
+			display: flex;
+			height: 100%;
+		}
+
+		.container.mt-5 {
+			margin: 1px auto;
+			display: flex;
+		}
+
+		.row.justify-content-center{
+			margin:auto;
+			flex:1;
+		}
+
+		.card{
+			padding: 10px;
+		}
+
 		.card:nth-child(1) {
 			background-color: #2E5F7D;
 			color: #fff;
@@ -62,42 +86,48 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 			background-color: #EAE7EE;
 			color: #000;
 		}
+
+		.pwd{
+			padding-bottom: 30px;
+		}
 	</style>
 
 </head>
 
 <body>
+	<div class="containers">
+		<div class="container mt-5">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<h4 class="text-center">Login</h4>
+						</div>
 
-	<div class="container mt-5">
-		<div class="row justify-content-center">
-			<div class="col-md-6">
-				<div class="card">
-					<div class="card-header">
-						<h4 class="text-center">Login</h4>
-					</div>
-
-					<div class="card-body">
-						<form method="post" action="">
+						<div class="card-body">
+							<form method="post" action="">
 
 
-							<!-- ini letak buat masukkin formnya -->
-							<div class="form-group">
-								<label for="Email">Email</label>
-								<input type="email" name="email" class="form-control" required>
+								<!-- ini letak buat masukkin formnya -->
+								<div class="form-group">
+									<label for="Email">Email</label>
+									<input type="email" name="email" class="form-control" required>
+								</div>
+								<div class="form-group pwd">
+									<label for="password">Password</label>
+									<input type="password" name="password" class="form-control" required>
+								</div>
+
+								<button type="submit" class="btn btn-primary btn-block butlogin">Login</button>
+
+							</form>
+							<div class="text-center mt-3">
+								<div>Belum punya akun?</div>
+								<a href="../registrasi.php">Regis dulu</a>
 							</div>
-							<div class="form-group">
-								<label for="password">Password</label>
-								<input type="password" name="password" class="form-control" required>
-							</div>
+						</div>
 
-							<button type="submit" class="btn btn-primary btn-block">Login</button>
-
-						</form>
-						<div class="text-center mt-3">
-                        <div>Belum punya akun?</div>
-                        <a href="../registrasi.php">Regis dulu</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
