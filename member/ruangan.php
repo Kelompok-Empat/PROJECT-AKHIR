@@ -73,7 +73,7 @@ $query = mysqli_query($conn, $sql);
             <p class="price">Rp
               <?= $data['harga'] ?> per malam
             </p>
-            <p><a href="reservasimember.php">Book Now</a></p>
+            <p><a href="reservasimember.php?id=<?php echo $data["no_room"] ?>" class="booking">Book Now</a></p>
           </div>
         <?php endwhile ?>
       </div>

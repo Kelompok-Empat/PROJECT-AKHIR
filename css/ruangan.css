@@ -22,7 +22,7 @@ h1 {
   align-items: center;
   vertical-align: top;
   line-height:0.8cm;
-  border:1px solid black;
+  border:1px solid #8CB27F;
   border-radius:10px;
   overflow:hidden;
 }
@@ -42,9 +42,11 @@ h1 {
   display: inline-block;
   margin: 20px;
   text-align: center;
-  border: 1px solid black;
   border-radius: 10px;
   text-decoration: none;
+  background:white;
+  color:#8CB27F;
+  border:1px solid #8CB27F;
 }
 
 .room .kapasitas {
@@ -54,6 +56,12 @@ h1 {
 .room .price {
   font-weight: bold;
   color: red;
+}
+
+.booking:hover{
+  background:#8CB27F;
+  color:white;
+  border:1px solid white;
 }
 
 /* .room button {

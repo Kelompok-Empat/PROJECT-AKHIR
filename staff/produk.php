@@ -56,9 +56,12 @@ $result = mysqli_query($conn, $query);
                         <td>
                             <?php echo $row["jumlah"] ?>
                         </td>
-                        <td>
-                            <a href="updateproduk.php?id=<?php echo $row["id_produk"] ?>">Update</a><br>
-                            <a href="hapusproduk.php?id=<?php echo $row["id_produk"] ?>">Hapus</a>
+                        <td class="crud">
+                            
+                                <a class="update" href="updateproduk.php?id=<?php echo $row["id_produk"] ?>"><span>Update
+                                </span></a>
+                                <a class="delete" href="hapusproduk.php?id=<?php echo $row["id_produk"] ?>"><span>Hapus</span></a>
+                            </span>
                         </td>
                     </tr>
                     <?php $i++; ?>

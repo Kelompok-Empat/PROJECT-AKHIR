@@ -56,21 +56,31 @@ $result = mysqli_query($conn, $sql);
             $idroom = $row['id_room'];
             $sqlroom = "SELECT * FROM room WHERE no_room= $idroom";
             $room = mysqli_query($conn, $sqlroom)->fetch_assoc();
+
+            $tglCheckin = strtotime($row['tgl_checkin']);
+            $tglCheckout = strtotime($row['tgl_checkout']);
+            $durasi = ($tglCheckout - $tglCheckin) / (60 * 60 * 24);
+
+            $harga = $room['harga'] * $durasi;
+
+            $formattedHarga = number_format($harga, 0, ',', '.');
+
             ?>
             <p class='name'>
               <?= $row['nama'] ?>
             </p>
-            Tgl. Check In :
+            Tgl. Check In:
             <?= $row['tgl_checkin'] ?><br><br>
-            Tgl. Check Out :
+            Tgl. Check Out:
             <?= $row['tgl_checkout'] ?><br><br>
-            Ruangan :
+            Ruangan:
             <?= $idroom ?><br><br>
-            Harga :
-            <?= $room['harga'] ?>
+            Harga:
+            <?= $formattedHarga ?>
           </div>
           <hr>
         <?php endwhile ?>
+
 
       </div>
     </div>

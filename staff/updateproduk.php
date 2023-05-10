@@ -1,3 +1,21 @@
+<?php 
+
+require '../koneksi.php';
+
+session_start();
+
+// Cek apakah user sudah login atau belum
+if ($_SESSION['status'] != "loginstaff" && !isset($_SESSION["id"])) {
+  header("location:../index.php");
+}
+
+$id = $_GET["id"];
+$sql = "SELECT * FROM produk WHERE id_produk = $id";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,12 +47,25 @@
       <div class="containers">
         <h1>Update Produk</h1><br>
         <form method="post" action="">
-          <input type="text" name="namaproduk" placeholder="Nama Produk" required>
+          <input type="text" name="namaproduk" value="<?=$row['nama_produk']?>" readonly class='produk-name'>
           <br><br>
           <input type="number" name="jumlah" placeholder="Jumlah" required>
           <br><br>
-          <input type="submit" name="submit" value="update">
+          <div class="box-button">
+            <input type="submit" name="submit" value="Update" class="update">
+            <a href="produk.php" class="kembali">kembali</a>
+          </div>
         </form>
+        <?php 
+        if (isset($_POST['submit'])) {
+          $namaproduk = $_POST['namaproduk'];
+          $jumlah = $_POST['jumlah'];
+        
+          $sqlupdate = "UPDATE produk SET jumlah = $jumlah WHERE nama_produk = '$namaproduk'";
+          mysqli_query($conn, $sqlupdate);
+          echo "<p class='success' style='color: #55725c; margin-top:10px; font-size:12px;'>Data berhasil diupdate</p>";
+        }
+        ?>
       </div>
     </div>
 
