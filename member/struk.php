@@ -52,6 +52,7 @@ $result = mysqli_query($conn, $sql);
         <hr>
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
           <div class='struk'>
+            <img src="../img/formin (1).png" alt="">
             <?php
             $idroom = $row['id_room'];
             $sqlroom = "SELECT * FROM room WHERE no_room= $idroom";
@@ -87,6 +88,10 @@ $result = mysqli_query($conn, $sql);
               </div>
             <div class="notes">
               Terima kasih atas reservasi Anda!
+            </div>
+
+            <div class="notes2">
+              DILARANG KERAS MELAKUKAN CANCEL!
             </div>
           </div>
           <hr>
